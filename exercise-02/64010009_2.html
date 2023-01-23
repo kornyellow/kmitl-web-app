@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>64010009_1</title>
+
+    <style>
+        html {
+            display: flex;
+            justify-content: center;
+        }
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 880px;
+            background-color: lavender;
+        }
+        .top, footer {
+            color: darkorchid;
+            background-color: lightpink;
+            text-align: center;
+        }
+        .top h1 {
+            margin: 0;
+        }
+        .article {
+            color: orchid;
+            text-align: center;
+        }
+        .reporter {
+            color: blueviolet;
+            height: 210px;
+            padding: 0 40px;
+        }
+        .reporter time {
+            color: darkmagenta;
+            font-style: italic;
+        }
+        .reporter img {
+            border: thick solid darkorchid;
+            float: right;
+        }
+        article {
+            display: flex;
+            padding: 0 40px;
+        }
+        article > * {
+            flex-grow: 1;
+        }
+        aside {
+            float: right;
+            border-top: medium solid black;
+            border-bottom: medium solid black;
+            font-size: 35px;
+            width: 390px;
+            margin-right: 40px;
+        }
+        fieldset {
+            display: inline;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 880px;
+        }
+        .prog {
+            padding-left: 40px;
+        }
+        .luckd {
+            padding-left: 40px;
+        }
+    </style>
+</head>
+<body>
+<header class="top"><h1>SW Studio Today</h1></header>
+<header class="article"><h2>The record of the CSS class</h2></header>
+<div class="reporter">
+    <img src="https://scontent.fbkk7-2.fna.fbcdn.net/v/t39.30808-1/323295585_849150716313981_4540302835995691120_n.jpg?stp=dst-jpg_p320x320&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=fR7_JL8ALSsAX_mCxpI&tn=OmIXOaTXebq-eUc0&_nc_ht=scontent.fbkk7-2.fna&oh=00_AfBu1Hbb2MhGzk1jgUQ5yPcEyrNvpx0GSuGg7i_I3z9Pmw&oe=63D2E2B5" alt="Korn Profile" width=200>
+    Reported by<br>
+    Mr. Korn Rojrattanapanya<br>
+    Korn<br>
+    ID 64010009<br><br>
+    <time datetime="2022-01-23">Jan 23, 2023</time>
+</div>
+<article>
+    <section class="col1">
+        <h3>Introduction</h3>
+        <p>describe your background about CSS e.g.
+        <ul>
+            <li>do you know CSS?</li>
+            <li>Have you ever been using CSS?</li>
+            <li>Have you ever worked with CSS before?</li>
+            <li>Have you any idea how CSS works?</li>
+            <li>What are you expecting from CSS?</li>
+            <li>etc.</li>
+        </ul>
+    </section>
+
+    <section class="col2">
+        <h3>The expectation</h3>
+        <p>Describe your expectations for today's class</p>
+        <p>You can list it like this:</p>
+        <ol>
+            <li>expect #1</li>
+            <li>expect #2</li>
+            <li>expect #3</li>
+        </ol>
+    </section>
+</article>
+
+<aside>
+    <p><em>your quote of today's class</em></p>
+</aside>
+
+<section class="prog">
+    <p>Progress of today's class <progress value="2" max="5"></progress></p>
+</section>
+
+<section class="luckd">
+    <p>register for lucky draw</p>
+    <form>
+        <fieldset>
+            <label for="name">Name:</label><em>*</em> <input type="text" id="name" placeholder="John Smith" autofocus required><br>
+            <label for="email">email:</label><em>*</em> <input type="email" id="email" placeholder="abc@def.com" autofocus required><br>
+            <label for="tel">Tel:</label><em>*</em> <input type="tel" id="tel" placeholder="0xx-xxxxxxx" pattern="[0-9]{3}-[0-9]{7}" autofocus required><br>
+            <input type="submit">
+        </fieldset>
+    </form>
+</section>
+<footer>
+    ce.kmitl all rights reserved & copyright 2023
+</footer>
+</body>
+</html>
