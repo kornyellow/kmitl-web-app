@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <title>KORNYELLOW</title>
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: url("https://images4.alphacoders.com/585/thumb-1920-585935.png") no-repeat fixed;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -9999;
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+        .banner {
+            background-color: rgba(20, 20, 20, 1);
+        }
+        .font-display {
+            font-family: 'Bodoni Moda', serif;
+        }
+        .limit-line {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        footer {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-lg">
+        <a class="font-display fw-bold navbar-brand" href="#">KORNYELLOW</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#news">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#videos">Videos</a>
+                </li>
+            </ul>
+        </div>
+        <form class="d-lg-flex d-none" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search here..." aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<main class="container-lg">
+    <section class="banner text-white p-3 py-4 p-sm-5 rounded-4">
+        <header class="row gy-4">
+            <div class="col-12 col-md-3 text-center text-sm-start">
+                <img class="w-100 rounded-circle" width="300" src="https://avatars.githubusercontent.com/u/33192956" alt="Korn Profile">
+            </div>
+            <div class="col-12 col-md-9">
+                <h1 class="font-display fst-italic fw-semibold">Korn Rojrattanapanya</h1>
+                <p class="fw-lighter">I'm Korn! I'm a game developer and programmer with a passion for creating fun and engaging experiences. I specialize in using GameMaker Studio to bring my ideas to life, and I'm always looking for new challenges and opportunities to learn and grow. Feel free to check out my projects and get in touch if you have any questions or just want to chat!</p>
+                <a href="https://github.com/kornyellow" target="_blank" class="link-warning fw-semibold">Get in touch...</a>
+            </div>
+        </header>
+    </section>
+
+    <section class="mt-2 mt-md-3">
+        <div class="row gy-2 gy-md-0 gx-md-3">
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-md-4 order-md-last">
+                            <img class="object-fit-cover w-100 h-100 img-fluid rounded-end" src="https://th.bing.com/th/id/R.444457a1f663b8a5f1ba3a54e08f107f?rik=AaOB7j%2flmuFVDw&pid=ImgRaw&r=0" alt="FPGA Game Console">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-4">
+                                <div class="card-text fw-bold text-danger mb-1">FPGA, Embedded System</div>
+                                <h2 class="card-title font-display mb-0 fw-semibold text-truncate">FPGA Game Console</h2>
+                                <div class="mb-2"><small class="card-text text-muted">Monday, Oct 12, 2022</small></div>
+                                <p class="card-text limit-line">Digital system fundamental final project, using FPGAs to make a game console and code a simple Brick Breaker game using VHDL language.</p>
+
+                                <a href="https://github.com/kornyellow/digital-project" target="_blank" class="link-primary fw-semibold">More details...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-md-4 order-md-last">
+                            <img class="object-fit-cover w-100 h-100 img-fluid rounded-end" src="https://th.bing.com/th/id/OIP.l_ZjFUn6SOwbW3XmI6oLJQHaE7?pid=ImgDet&rs=1" alt="Language Switcher">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-4">
+                                <div class="card-text fw-bold text-success mb-1">Windows, Tools</div>
+                                <h2 class="card-title font-display mb-0 fw-semibold text-truncate">Language Switcher</h2>
+                                <div class="mb-2"><small class="card-text text-muted">Saturday, Jan 12, 2023</small></div>
+                                <p class="card-text limit-line">Because Windows is stupid, this easy customization by just setting the button to change the language to any button, it cannot be done. Thus, this tool was born for that, if left open, will let you  press the button that we set to change the language instead.</p>
+
+                                <a href="https://github.com/kornyellow/language-switcher" target="_blank" class="link-primary fw-semibold">More details...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-4 mt-md-5">
+        <h2 class="font-display fw-semibold fst-italic" id="news">News</h2>
+        <hr>
+        <article class="mb-5">
+            <h3 class="font-display fw-bold mb-0">Back to school on last semester</h3>
+            <div class="mb-3"><small class="card-text text-muted">Monday, 9 Jan, 2023 by <a href="https://github.com/kornyellow" target="_blank" class="fw-semibold">kornyellow</a></small></div>
+
+            <p>Being in love is a good thing, but it is not the best thing. There are many things below it, but there are also things above it. You cannot make it the basis of a whole life. It is a noble feeling, but it is still a feeling. Know no feeling can be relied on to last in its full intensity, or even to last at all. Knowledge can last, principles can last, habits can last, but feelings come and go.</p>
+            <p>You came to school to learn. To grow, to seek out knowledge, to gain a better understanding of the fields you have studied. It is admirable to maintain focus even during your last months as an undergraduate student. Remember what Lewis reminds us—that so many things can come and go in this life and that oftentimes, the only constant we can depend on is impermanence. With change, however, the knowledge you have accumulated in your years in college will stay. What you learn and what you remember will guide you as you move forward.</p>
+        </article>
+        <article class="mb-5">
+            <h3 class="font-display fw-bold mb-0">This malware hides on USB drives, waiting to strike Windows machines</h3>
+            <div class="mb-3"><small class="card-text text-muted">Saturday, 8 Jan, 2023 by <a href="https://github.com/kornyellow" target="_blank" class="fw-semibold">kornyellow</a></small></div>
+
+            <p>Palo Alto Networks’ Unit 42 team has uncovered a series of tools and malware samples in a recent Black Basta breach, with one particularly nasty train gaining particular attention.</p>
+            <p>The campaign uses years-old PlugX malware to infect removable USB drives, which can go on to affect any Windows host they are connected to.</p>
+            <p>Apparently existing for more than a decade, the campaign was initially credited to Chinese hacker groups however it has supported an “evolving set of capabilities throughout the years”, rendering it very difficult to attribute threats to any given group or individual.</p>
+        </article>
+    </section>
+
+    <section class="mt-2 mt-md-3">
+        <h2 class="font-display fw-semibold fst-italic" id="blogs">Blogs</h2>
+        <hr>
+        <article class="mb-5">
+            <h3 class="font-display fw-bold mb-0">It actually works?</h3>
+            <div class="mb-3"><small class="card-text text-muted">Thursday, 10 Jan, 2023 by <a href="https://github.com/kornyellow" target="_blank" class="fw-semibold">kornyellow</a></small></div>
+
+            <p>I actually have been coding a simple program for a while now, and that thing is, language switcher. Yes, that might sound stupid, and IT IS! But not me, its Windows, why? you ask. Because if you don't know, Windows doesn't allow you to change language layout button for keyboard in any way, there come with a numbers of preset keys and I don't like any of them.</p>
+            <p>So that's why Language Switcher was born, at first, I didn't even know what am I doing, I was just fiddling with window.h library, but somehow, I just figure it out how to interact with language system or whatever it is in Windows, so I code a simple program for user to bind anykeys to change language, and that is it! I just made a program!</p>
+            <p>Oh boy, oh boy, I was so happy that day, I've been using since. So I thought, what if there's some people having a same problem like me, I might be able to solve their problem too. So I clean my code, publish it on GitHub, and post it on Facebook XD. To my surprise, a lot of people start noticing my program, they're even suggesting a feature!</p>
+        </article>
+        <article class="mb-5">
+            <h3 class="font-display fw-bold mb-0">Incompatible pet</h3>
+            <div class="mb-3"><small class="card-text text-muted">Wednesday, 19 Feb, 2019 by <a href="https://github.com/kornyellow" target="_blank" class="fw-semibold">holidaygirl225</a></small></div>
+
+            <p>As you may know, Cat Petterz 2 is one of this admin's favorite games. To those that don't know, it's a game where you take care of a cat and raise it. Sounds simple, right? XD</p>
+            <p>Actually, the game has a REALLY deep animation and breeding system... So players have been able to hex edit the game data to create brand-new pets.</p>
+            <p>If you download the right mods, you can raise birds, hamsters, cars, cartoon characters, and even more. Mewmewqueen's Sympton family pack is a great example of how far things can go.</p>
+            <p>However, you have to be careful, because, not all mods are very compatible. When pets fall in love, an egg appears and, it hatches into a new pet that combines the animation and visual data of the two parents. Meaning, if you try to breed a hamster and a car, you'll either get a complete freak of nature XD Or, worse, you'll get this message.</p>
+            <p>"Incompatible pet"</p>
+            <p>Then the game will freeze and the music will glitch out.</p>
+            <p>I was so scared of seeing this message as a kid, I would punish my pets so that they would NEVER fall in love. If an egg did appear, I would throw in the trash right away.</p>
+            <a href="#untiloneday">Until one day...</a>
+        </article>
+        <article class="mb-5">
+            <h3 class="font-display fw-bold mb-0" id="untiloneday">Until one day...</h3>
+            <div class="mb-3"><small class="card-text text-muted">Wednesday, 19 Feb, 2019 by <a href="https://github.com/kornyellow" target="_blank" class="fw-semibold">holidaygirl225</a></small></div>
+
+            <p>If you have no pets, it's known that there's a rare chance for an egg to appear giving you a random pet. This is the only way to get some secret cats in the game, which are still super rare on top of THAT.</p>
+            <p>So it's a lot of waiting for eggs, hatching them, and throwing away tons of cats trying to get the perfect character (This caused other problems, but I'll explain that another time XP)</p>
+            <p>But, one day when I was trying to get the ultimate cat, something weird happened.</p>
+            <p>A white egg showed up on my screen, but there was a message with it. "SPECIAL"</p>
+            <p>I was really excited. I've never gotten a special egg before. In fact, I'd never even heard of it at all. I sat there for an hour waiting to see what it would turn out to be. Maybe I would be the first one to discover a brand-new cat?</p>
+            <p>But what was weird is, the egg never hatched. I started to worry that it was some kind of glitch, so I decided to try and get rid of it before it hurt my computer... and that's where things got REALLY strange.</p>
+            <p>No matter what I did, I couldn't move or throw away the egg.</p>
+            <p>I tried clicking it over and over, and in the end, all that happened is it made some sort of weird sound.</p>
+            <p>This freaked me out so much I deleted the game and reinstalled it. ... but the egg was still there. (Obviously XP)</p>
+            <p>Now that I'm older I think what happened is, I had so many mods installed that the egg didn't know what to hatch into? But at the time I thought my computer was haunted or something, or the egg was going to kill me XD</p>
+            <p>After a few hours of freaking out, I eventually faced my fears and loaded up the game again. The egg was there, but it didn't seem to be doing anything. So I started raising it like it was a normal pet, brushing it and playing with it and stuff.</p>
+            <p>By the end of the day, I actually started thinking it was a cool pet, and maybe I could try to figure out how to upload it online as a mod.</p>
+            <p>I wasn't able to do that though.</p>
+            <p>The next day when I opened the game, the egg was gone, with a message that said it "left home due to happiness."</p>
+            <p>Usually the message is "(pet) left home due to sadness" and only happens because you neglected your pet. It's not supposed to happen because you were nice XD</p>
+        </article>
+        <hr>
+    </section>
+
+    <section class="mt-4 mt-md-5 pb-4">
+        <h2 class="font-display fw-semibold fst-italic text-center" id="videos">Videos</h2>
+        <p class="text-center fw-light">Welcome to <a class="link-danger fw-semibold" href="https://www.youtube.com/channel/UCSgUwlFlKYQXEh5BIs1OsKQ" target="_blank">KornYellow</a> YouTube channel, filled with quality contents about coding and programming.</p>
+
+        <section class="mt-5">
+            <div class="row g-3">
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="https://i.ytimg.com/an_webp/wdTPDAoEBhw/mqdefault_6s.webp?du=3000&sqp=CJD_4J4G&rs=AOn4CLDgbvkRFOZ_Dc9REa_k9t_M6OGP5Q" alt="Youtube Thumbnail">
+                        <div class="card-body p-4">
+                            <h3 class="card-title font-display mb-0 fw-semibold text-truncate">Language Switcher</h3>
+                            <div class="mb-2"><small class="card-text text-muted">4 weeks ago</small></div>
+                            <p class="card-text limit-line">Because Windows is stupid, this easy customization by just setting the button to change the language to any button, it cannot be done. Thus, this tool was born for that, if left open, will let you  press the button that we set to change the language instead.</p>
+
+                            <a href="https://www.youtube.com/watch?v=wdTPDAoEBhw" target="_blank" class="link-primary fw-semibold">Watch full video...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="https://i.ytimg.com/an_webp/jIqH4pMimd0/mqdefault_6s.webp?du=3000&sqp=CIbw4J4G&rs=AOn4CLCu-xpf0wkwK6ENzlRoSyMvTKJcWQ" alt="Youtube Thumbnail">
+                        <div class="card-body p-4">
+                            <h3 class="card-title font-display mb-0 fw-semibold text-truncate">Brick Breaker</h3>
+                            <div class="mb-2"><small class="card-text text-muted">1 month ago</small></div>
+                            <p class="card-text limit-line">Digital system fundamental final project, using FPGAs to make a game console and code a simple Brick Breaker game using VHDL language.</p>
+
+                            <a href="https://www.youtube.com/watch?v=jIqH4pMimd0" target="_blank" class="link-primary fw-semibold">Watch full video...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="https://i.ytimg.com/an_webp/IxO6Z-ySE4A/mqdefault_6s.webp?du=3000&sqp=CODg4J4G&rs=AOn4CLAl3RQIzIPmF93GMMvp9ptlXNWkVg" alt="Youtube Thumbnail">
+                        <div class="card-body p-4">
+                            <h3 class="card-title font-display mb-0 fw-semibold text-truncate">Arch Linux Setup</h3>
+                            <div class="mb-2"><small class="card-text text-muted">3 months ago</small></div>
+                            <p class="card-text limit-line">Arch Linux server setup walkthrough, simple Arch Linux setup using archinstall command, simple setup, network, etc.</p>
+
+                            <a href="https://www.youtube.com/watch?v=IxO6Z-ySE4A" target="_blank" class="link-primary fw-semibold">Watch full video...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="https://i.ytimg.com/an_webp/4iFdHrhlt8s/mqdefault_6s.webp?du=3000&sqp=CLLu4J4G&rs=AOn4CLBFGcMs4jn3qdSMyMo8QHU7gYVLDQ" alt="Youtube Thumbnail">
+                        <div class="card-body p-4">
+                            <h3 class="card-title font-display mb-0 fw-semibold text-truncate">Vaccine Application</h3>
+                            <div class="mb-2"><small class="card-text text-muted">8 months ago</small></div>
+                            <p class="card-text limit-line">Object Oriented Programming final project, using JavaFX for UI and MySQL for database management. For educational purpose only.</p>
+
+                            <a href="https://www.youtube.com/watch?v=4iFdHrhlt8s" target="_blank" class="link-primary fw-semibold">Watch full video...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="text-center mt-4 fw-light">Like what you see? Check out <a class="link-danger fw-semibold" href="https://www.youtube.com/channel/UCSgUwlFlKYQXEh5BIs1OsKQ" target="_blank">my YouTube channel</a></p>
+    </section>
+</main>
+
+<div class="text-center mb-4"><a href="#" class="link-dark">Back to top ^</a></div>
+<footer class="border-top py-5 text-center">
+    <p class="mb-0"><a href="https://github.com/kornyellow" target="_blank" class="link-dark">Korn Rojrattanapanya</a></p>
+    <small>64010009</small>
+</footer>
+
+</body>
