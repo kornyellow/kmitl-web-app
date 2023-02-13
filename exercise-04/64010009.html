@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <div id="main_container">
+    </div>
+    <script>
+        let color = ["tomato", "orange", "dodgerblue", "mediumseagreen", "grey", "slateblue", "violet", "lightgray"];
+        let color_now = 0;
+        let change_color = () => {
+            date_and_time.style.backgroundColor = color[color_now];
+            color_now += 1;
+            color_now %= color.length;
+        };
+
+        let main_container = document.getElementById("main_container");
+
+        let main_header = document.createElement("h2");
+        main_header.innerHTML = "Exercise 04: JavaScript&DOM";
+        main_container.appendChild(main_header);
+
+        let display_date_button = document.createElement("button");
+        display_date_button.innerHTML = "Click me to display Date and Time";
+        display_date_button.style.marginBottom = "8px";
+        main_container.appendChild(display_date_button);
+
+        let date_and_time = document.createElement("div");
+        date_and_time.hidden = true;
+        date_and_time.id = "date_and_time";
+        date_and_time.innerHTML = new Date().toString();
+        date_and_time.style.position = "absolute";
+        date_and_time.style.width = "fit-content";
+        date_and_time.style.right = "0";
+        date_and_time.style.top = "0";
+        date_and_time.style.border = "4px solid black";
+        main_container.appendChild(date_and_time);
+
+        let my_worker = null;
+
+        let create_worker = () => {
+            let worker = new Worker("64010009.js");
+            display_date_button.style.visibility = "hidden";
+            change_color();
+            date_and_time.innerHTML = new Date().toString();
+            date_and_time.hidden = false;
+            worker.onmessage = (e) => {
+                date_and_time.innerHTML = e.data;
+                change_color();
+            };
+            return worker;
+        };
+        let destroy_worker = () => {
+            my_worker.terminate();
+        };
+
+        display_date_button.onclick = () => {
+            my_worker = create_worker();
+        };
+        date_and_time.onclick = () => {
+            if (date_and_time.style.position == "absolute") {
+                destroy_worker();
+                date_and_time.style.position = "relative";
+                display_date_button.style.display = "none";
+            } else {
+                my_worker = create_worker();
+                date_and_time.style.position = "absolute"
+                display_date_button.style.display = "block";
+                display_date_button.style.paddingBottom = "5px";
+            }
+        }
+
+        let personal_info_toggle_button = document.createElement("a");
+        personal_info_toggle_button.innerHTML = "Personal Info";
+        personal_info_toggle_button.style.color = "violet";
+        personal_info_toggle_button.href = "#";
+        personal_info_toggle_button.onmouseover = () => {
+            personal_info_toggle_button.style.background = "yellow";
+        };
+        personal_info_toggle_button.onmouseout = () => {
+            personal_info_toggle_button.style.background = "transparent";
+        };
+
+        let personal_info_container = document.createElement("div");
+        personal_info_container.appendChild(personal_info_toggle_button);
+        personal_info_container.style.marginBlock = "25px";
+        main_container.appendChild(personal_info_container);
+
+        let personal_info = document.createElement("ul");
+        personal_info.hidden = true;
+
+        personal_info_toggle_button.onclick = () => {
+            personal_info.hidden = !personal_info.hidden;
+        };
+
+        let name = document.createElement("li");
+        name.innerHTML = "Name: Korn Rojrattnapanya, ID: 64010009";
+        personal_info.appendChild(name);
+
+        let subject = document.createElement("li");
+        subject.innerHTML = "Subject: Web Application Development";
+        personal_info.appendChild(subject);
+
+        let semester = document.createElement("li");
+        semester.innerHTML = "Semester: 2/2566";
+        personal_info.appendChild(semester);
+
+        main_container.appendChild(personal_info);
+
+        let snapshots_header = document.createElement("h1");
+        snapshots_header.innerHTML = "Snapshots";
+        main_container.appendChild(snapshots_header);
+
+        let snapshots_data = [
+            ["Fireworks", "https://thumbs.dreamstime.com/b/fireworks-colors-night-sky-stock-image-black-background-233389298.jpg"],
+            ["Crest", "https://th.bing.com/th/id/OIP.qemnrIi7I6rC3D9T3R7Z0wHaHa?w=186&h=185&c=7&r=0&o=5&pid=1.7"],
+            ["Action", "https://th.bing.com/th/id/R.07724a2cb9815845d55104f2cfbb59d3?rik=BMMnVZpIjx%2fScQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f_sV07YqpaQCQ%2fSgH-FPDolHI%2fAAAAAAAAAB0%2fPAGeObzuEiA%2fs320%2flights-camera-action-clapper.jpg&ehk=SN1Arl7CztU5bHVukcukLEQ%2bGLupPm7odo36QiV7ckI%3d&risl=&pid=ImgRaw&r=0"],
+            ["Buffalo", "https://th.bing.com/th/id/OIP.tUTdka2SbxqU4TQbqio9MwHaE8?pid=ImgDet&rs=1"],
+        ];
+
+        let snapshots_ul = document.createElement("ul");
+
+        let footer_container = document.createElement("img");
+        footer_container.src = "https://upload.wikimedia.org/wikipedia/commons/4/4e/Kmitl.jpg";
+
+        snapshots_data.forEach((arr) => {
+            let snapshot_li = document.createElement("li");
+            snapshots_ul.appendChild(snapshot_li);
+
+            let snapshot_button = document.createElement("a");
+            snapshot_button.innerHTML = arr[0];
+            snapshot_button.href = "#";
+            snapshot_button.onclick = () => {
+               footer_container.src = arr[1];
+            };
+            snapshot_li.appendChild(snapshot_button);
+        });
+
+        main_container.appendChild(snapshots_ul);
+        main_container.appendChild(footer_container);
+    </script>
+</body>
+</html>
