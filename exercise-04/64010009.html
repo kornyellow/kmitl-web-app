@@ -28,7 +28,7 @@
         date_and_time.hidden = true;
         date_and_time.id = "date_and_time";
         date_and_time.innerHTML = new Date().toString();
-        date_and_time.style.position = "absolute";
+        date_and_time.style.position = "fixed";
         date_and_time.style.width = "fit-content";
         date_and_time.style.right = "0";
         date_and_time.style.top = "0";
@@ -57,13 +57,13 @@
             my_worker = create_worker();
         };
         date_and_time.onclick = () => {
-            if (date_and_time.style.position == "absolute") {
+            if (date_and_time.style.position == "fixed") {
                 destroy_worker();
                 date_and_time.style.position = "relative";
                 display_date_button.style.display = "none";
             } else {
                 my_worker = create_worker();
-                date_and_time.style.position = "absolute"
+                date_and_time.style.position = "fixed"
                 display_date_button.style.display = "block";
                 display_date_button.style.paddingBottom = "5px";
             }
