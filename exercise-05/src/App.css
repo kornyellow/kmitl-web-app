@@ -1,10 +1,16 @@
+body {
+	background-color: gray;
+}
+
 .app {
 	width: 1000px;
 	margin-inline: auto;
+	padding-bottom: 50px;
 }
 
 .app h1 {
 	text-align: center;
+	color: orange;
 }
 
 .card {
@@ -14,6 +20,7 @@
 	padding: 20px;
 	border: 2px solid black;
 	border-radius: 20px;
+	background-color: papayawhip;
 }
 
 .card-body {
@@ -43,6 +50,9 @@
 
 .card-footer .vote-result {
 	padding: 10px;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 10px;
+	background-color: lime;
+	font-weight: bold;
+	color: blueviolet;
 }

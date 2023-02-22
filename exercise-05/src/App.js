@@ -15,6 +15,7 @@ class App extends React.Component {
 				<h1>โหวตอาหาร</h1>
 				{ foodcard_data.map (data => (
 					<FoodCard
+						key={data.header}
 						header={data.header}
 						subheader={data.subheader}
 						detail={data.detail}

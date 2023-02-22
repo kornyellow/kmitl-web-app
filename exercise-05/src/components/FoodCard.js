@@ -1,10 +1,27 @@
 import React from 'react'
 
 import '../App.css';
-import VoteButton from './VoteButton';
-import UnvoteButton from './UnvoteButton';
 
 class FoodCard extends React.Component {
+	constructor() {
+		super();
+		this.state = { vote_count: 0 };
+	}
+	vote = () => {
+		if (this.state.vote_count < 10)
+			this.setState({ vote_count: this.state.vote_count+1 });
+	}
+	unvote = () => {
+		if (this.state.vote_count > 0)
+			this.setState({ vote_count: this.state.vote_count-1 });
+	}
+	show_vote_result = () => {
+		if (this.state.vote_count == 0)
+			return "MIN";
+		if (this.state.vote_count == 10)
+			return "MAX";
+		return this.state.vote_count;
+	}
 	render() {
 		return (
 			<section className='card'>
@@ -19,9 +36,9 @@ class FoodCard extends React.Component {
 					</div>
 				</div>
 				<div className='card-footer'>
-					<VoteButton />
-					<div className='vote-result'>MIN</div>
-					<UnvoteButton />
+					<button className='button-vote' onClick={this.vote}>Click to vote</button>
+					<div className='vote-result'>{this.show_vote_result()}</div>
+					<button className='button-unvote' onClick={this.unvote}>Click to unvote</button>
 				</div>
 			</section>
 		);
