@@ -11,10 +11,12 @@ class FoodCard extends React.Component {
 	vote_callback = () => {
 		if (this.state.vote_count < 10)
 			this.setState({ vote_count: this.state.vote_count+1 });
+		else alert("You cannot vote anymore!");
 	}
 	unvote_callback = () => {
 		if (this.state.vote_count > 0)
 			this.setState({ vote_count: this.state.vote_count-1 });
+		else alert("You cannot unvote anymore!");
 	}
 	show_vote_result = () => {
 		if (this.state.vote_count === 0)
